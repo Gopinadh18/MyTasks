@@ -1,0 +1,73 @@
+.filter-container {
+  padding: 20px;
+  margin-top:0px;
+  padding-top:0px;
+  background-color: #ffffff;
+}
+
+.task-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top:0px;
+  padding-top:0px;;
+  margin-bottom: 16px;
+}
+
+/* Tabs */
+.tabs-container {
+  display: flex;
+  flex-wrap: row;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.tab-button {
+  padding: 8px 20px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3s;
+  background-color:green;
+  color:white;
+  font-weight:bolder;
+}
+
+.tab-button:hover {
+  background-color: #e6e6e6;
+}
+
+.active-tab {
+  background-color: #0b69ff;
+  color: white;
+  border-color: #0b69ff;
+}
+
+/* Task list layout */
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+/* Individual task card */
+.task-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.task-card p {
+  margin: 8px 0;
+}
+
+.tag-button {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #333;
+}

@@ -1,0 +1,137 @@
+/* General reset & box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+/* Main container */
+.task-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; /* Row direction for side-by-side layout */
+    gap: 30px; /* Spacing between left and right sections */
+}
+
+/* Inner container (left side) */
+.inner-contanier {
+    flex: 2; /* Left section takes more space */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Heading */
+.task-heading {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Form styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels aligned left */
+.task-label,
+.tags-label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Input & select styling */
+.task-input,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.task-input:focus,
+select:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Button styling */
+.button {
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #357ab8;
+}
+
+/* Filter container (right side) */
+.filter-container {
+    flex: 1; /* Right section takes the remaining space */
+    padding-left: 20px; /* Padding to separate the two sections */
+}
+
+/* Task list inside Filter */
+.filter-container ul {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.filter-container li {
+    background-color: #f1f1f1;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.filter-container p {
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .task-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .task-heading {
+        font-size: 22px;
+    }
+
+    .task-input,
+    select,
+    .button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .filter-container p {
+        font-size: 14px;
+    }
+}
